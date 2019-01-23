@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Favorite TV Shows</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      // Defining the array and string
+      var favTVshows = [];
+      var tvShow;
+
+      // For Loop Elements Repeats 3 Times, This cant equal 4.. its only 1-3. i= the number that is prompted to the user.
+      for (var i = 1; i < 4; i++) {
+
+        // The input from prompt and store in the string var tvshow
+        tvShow = prompt("What's your #" + i + " favorite TV show?");
+
+        // this is getting stored in the array for favTvshow. It's pusing the info from the tvshow.
+        favTVshows.push(tvShow);
+      }
+
+      // This is just the order of how the alert pop up
+      for (var j = 0; j < favTVshows.length; j++) {
+
+        // This is just the order of how the alert pop up
+        alert(favTVshows[j]);
+      }
+
+    </script>
+
+  </body>
+</html>

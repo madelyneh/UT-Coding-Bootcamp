@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giphy API</title>
+</head>
+
+<body>
+
+  <div id="imageContent"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Example queryURL for Giphy API
+    var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+       $("#body").html(response.data);
+       console.log(response.data);
+       let imageContent = $("#imageContent");
+       let image = $("<img>");
+       image.attr("src", response.data[0].images.original.url);
+       imageContent.append(image);
+
+    });
+
+
+    // Use the still original on the clicks with the homework
+  </script>
+
+</body>
+
+</html>

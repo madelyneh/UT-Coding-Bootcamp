@@ -1,0 +1,50 @@
+div.center {
+    text-align: center
+}
+
+#p21 {
+    color: red;
+}
+
+#p22 {
+    color: blue;
+}
+
+#p23 {
+    color: green;
+}
+
+#p26 {
+    font-size: 150%;
+}
+
+#p27 {
+    font-size: 50%;
+}
+
+#p35 {
+    font-weight: bold;
+}
+
+#p38 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#p41 {
+    font-size: 150%;
+    color: orange;
+    font-weight: bold;
+}
+
+#p55 {
+    text-decoration-line: underline
+}
+
+p.styledFont {
+    font-size: 100%;
+    color: purple
+}
+
+#styledImage {
+    border: 5px solid blue;
+}

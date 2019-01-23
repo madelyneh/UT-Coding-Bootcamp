@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>JavaScript Content!</title>
+</head>
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <!-- Here we create a generic drink-options div -->
+  <div id="drink-options"></div>
+
+  <script type="text/javascript">
+
+    // Array holds all of the drinks available
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+
+//  jQuery 
+
+$.each(drinkList, function(index, value) {
+  var newDiv = $("<div>");
+  newDiv.text(value);
+  $('#drink-options').append(newDiv);
+});
+
+
+// Assigning the loop to a fuction.
+
+
+var myFunction = (function(index, value) {
+  var newDiv = $('<div>');
+    newDiv.text(value);
+    $('#drink-options').append(newDiv);
+})
+
+$.each(drinkList, myFunction);
+
+
+
+
+
+
+
+    // 1. Create code that "grabs" the div with the matching id (#drink-options);
+    // ...
+var targetDiv = document.getElementById("drink-options");
+
+
+    // ...
+
+
+    // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
+    // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
+    // ...
+var unorderedList = document.createElement('ul');
+
+
+for (var i = 0; i < drinkList.length; i++) {
+  var newDiv = document.createElement("li");
+  newDiv.textContent = drinkList[i];
+  targetDiv.appendChild(newDiv);
+}
+
+targetDiv.appendChild(unorderedList);
+
+
+$("#drink-options").html("<p>this will override what is in the div</p>");
+
+
+
+    // ...
+
+
+
+
+// This was stuff I copied from him in class.
+
+var targetDiv = document.getElementById("empty-div");
+targetDiv.textContent = "Some text";
+var newDiv = document.createElement("div");
+newDiv.textContent = "text inside the child div";
+targetDiv.appendChild(newDiv);
+
+// How to manipulate the DOM
+
+newDiv.setAttribute("class", "fancy");
+
+//this is putting a class and a style associated with the class Fancy to style the newDiv
+
+  </script>
+
+</body>
+</html>

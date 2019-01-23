@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Gothic+Coding|Source+Code+Pro');
+
+
+
+
+
+.style {
+    color: red;
+    font-weight: bold;
+    font-family: 'Indie Flower', cursive;
+    line-height: 130%;
+    letter-spacing: 3px;
+}
+#monospace {
+    color: red;
+    font-weight: bold;
+    font-family: 'Source Code Pro', monospace;
+    line-height: 130%;
+    letter-spacing: 3px;
+}
+
+#monospace2 {
+    color: red;
+    font-weight: bold;
+    font-family: 'Nanum Gothic Coding', monospace;
+    line-height: 130%;
+    letter-spacing: 3px;
+}
+
+a :hover {
+    background-color: gray;
+    color: blue;
+}
+
+a :focus {
+    background-color: black;
+    color: yellow;
+}
+
+a : 
