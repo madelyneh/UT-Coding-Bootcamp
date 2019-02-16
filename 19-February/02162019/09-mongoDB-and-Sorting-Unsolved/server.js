@@ -44,8 +44,25 @@ app.get("/all", function(req, res) {
 // TODO: Implement the remaining two routes
 
 // 1: Name: Send JSON response sorted by name in ascending order, e.g. GET "/name"
+app.get("/name", function(request, response) {
+  db.animals.find({}).sort({name: 1}, function(error, data) {
+    if  (error) {
+
+    }
+    response.json(data);
+  });
+});
 
 // 2: Weight: Send JSON response sorted by weight in descending order, , e.g. GET "/weight"
+app.get("/weight", function(request, response) {
+  db.animals.find({}).sort({weight: -1}, function(error, data) {
+    if  (error) {
+
+    }
+    response.json(data);
+  });
+});
+
 
 // Set the app to listen on port 3000
 app.listen(3000, function() {
