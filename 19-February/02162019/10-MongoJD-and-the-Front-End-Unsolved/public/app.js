@@ -20,8 +20,20 @@
 // by writing a function that takes in data (JSON) and creates a table body
 function displayResults(data) {
   // Add to the table here...
-}
+  $("tbody").empty();
+  data.forEach(function(element) {
+      var tr = $("<tr>").append(
+          $("<td>").text(element.name),
+          $("<td>").text(element.numLegs),
+          $("<td>").text(element.class),
+          $("<td>").text(element.weight),
+          $("<td>").text(element.whatIWouldReallyCallIt)
+      );
 
+      $("tbody").append(tr);
+  
+  });
+}
 $.getJSON("/all", function(data) {
   // Call our function to generate a table body
   displayResults(data);
