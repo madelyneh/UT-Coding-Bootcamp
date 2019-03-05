@@ -1,0 +1,61 @@
+.card {
+  background-size: cover;
+  background-position: center;
+  background-clip: content-box;
+  border: 6px solid white;
+  height: 400px;
+  width: 400px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  position: relative;
+  margin: 0 auto;
+  margin-top: 30px
+}
+
+.buttons {
+  margin: 85% auto;
+  position: inherit;
+}
+button {
+  margin: 15px;
+}
+
+/* .mainPic {
+  background-size: cover;
+  background-position: center;
+  background-clip: content-box;
+  position: absolute;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+
+} */
+
+.mainPic {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mainPic::after {
+  content: "";
+  display: block;
+  /* opacity: .4; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background: black; */
+}
+
+.mainPic h1, .mainPic h2 {
+  color: white;
+}
+
+.mainPic h1 {
+  font-size: 80px;
+  padding-top: 240px;
+  margin-top: 0;
+
+}
